@@ -30,6 +30,32 @@ angular.module('bahmni.common.displaycontrol.custom')
             link: link,
             template: '<ng-include src="contentUrl"/>'
         }
+    }]).directive('patientFollowupsDashboard', ['observationsService', 'appService', 'spinner', function (observationsService, appService, spinner) {
+        var link = $scope => {
+            var conceptNames = ["Tuberculosis, Next Followup Visit", "Diabetes, Followup Visit"];
+    
+            $scope.contentUrl = appService.configBaseUrl() + "/customDisplayControl/views/patientFollowupsDashboard.html";
+            spinner.forPromise(observationsService.fetch($scope.patient.uuid, conceptNames, "followups", undefined, undefined, undefined).then( response => {
+                $scope.patientFollowups = response.data;
+                $scope.displayFollowups = [];
+                response.data.forEach(followup => {
+                    let displayFollowup = {};
+                    displayFollowup.name = followup.concept.name;
+                    displayFollowup.date = followup.value;
+                    $scope.displayFollowups.push(displayFollowup);
+                });
+            }));
+        };
+    
+        return {
+            restrict: 'E',
+            link: link,
+            scope: {
+                patient: "=",
+                section: "="
+            },
+            template: '<ng-include src="contentUrl"/>'
+        }
     }]).directive('customTreatmentChart', ['appService', 'treatmentConfig', 'TreatmentService', 'spinner', '$q', function (appService, treatmentConfig, treatmentService, spinner, $q) {
     var link = function ($scope) {
         var Constants = Bahmni.Clinical.Constants;

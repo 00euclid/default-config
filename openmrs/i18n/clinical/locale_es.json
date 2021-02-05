@@ -69,6 +69,9 @@
   "MEDICATION_CHANGE_DURATION_BUTTON": "Cambiar Duración",
   "DASHBOARD_TITLE_Consultation_KEY": "Notas de la consulta",
 
+  "DASHBOARD_TITLE_FOLLOWUPS_KEY": "Patient Followups",
+  "DASHBOARD_NO_UPCOMING_FOLLOWUPS_KEY": "No upcoming followups",
+
   "DASHBOARD_TITLE_APPOINTMENTS_KEY": "Cita",
   "DASHBOARD_APPOINTMENTS_SLOT_KEY": "Ranura",
   "DASHBOARD_APPOINTMENTS_SERVICE_KEY": "Servicio",

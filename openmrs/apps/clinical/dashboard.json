@@ -19,6 +19,7 @@
                     "countyDistrict"
                 ]
             },
+            
             "forms2Validations": {
                 "type": "formsV2",
                 "displayOrder": 2,
@@ -97,7 +98,7 @@
                 "type":"radiology",
                 "showDetailsButton":true,
                 "displayOrder":5
-            },
+            },           
             "programs":{  
                 "translationKey":"DASHBOARD_TITLE_PROGRAMS_KEY",
                 "type":"programs",
@@ -410,6 +411,14 @@
                 "config": {
                     "title": "DASHBOARD_TITLE_APPOINTMENTS_KEY",
                     "template": "<patient-appointments-dashboard section='config' patient='patient'></patient-appointments-dashboard>"
+                }
+            },
+            "patientFollowups": {
+                "type": "custom",
+                "displayOrder": 5,
+                "config": {
+                    "title": "DASHBOARD_TITLE_FOLLOWUPS_KEY",
+                    "template": "<patient-followups-dashboard section='config' patient='patient'></patient-followups-dashboard>"
                 }
             },
 	    "Forms-2.0": {

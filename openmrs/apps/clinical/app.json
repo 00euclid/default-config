@@ -92,6 +92,15 @@
                 "multiSelect" : true,
                 "autocomplete" : true
             },
+            "Tuberculosis, Next Followup Visit" :{
+                "allowFutureDates": true
+            },
+            "Diabetes, Followup Visit": {
+                "allowFutureDates": true
+            },
+            "Datetime" : {
+                "allowFutureDates": false
+            },            
             "Posture": {
                 "buttonSelect": true
             },
