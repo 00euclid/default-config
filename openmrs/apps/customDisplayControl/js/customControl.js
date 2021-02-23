@@ -232,3 +232,19 @@ angular.module('bahmni.common.displaycontrol.custom')
         template: '<ng-include src="contentUrl"/>'
     };
 }]);
+// .directive('cardexDashboard', ['appService', function (appService) {
+//     var link = function($scope) {
+//         $scope.contentUrl = appService.configBaseUrl() + "/customDisplayControl/views/cardexDashboard.html";
+//         console.log(appService.configBaseUrl());
+//     };
+
+//     return {
+//         restrict: 'E',
+//         link: link,
+//         scope: {
+//             patient: "=",
+//             section: "="
+//         },
+//         template: '<ng-include src="contentUrl"/>'
+//     }
+// }]);
