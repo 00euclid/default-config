@@ -75,7 +75,7 @@
                     "displayOrder": 6
                 },
                 "cardex": {
-                    "translationKey":"DASHBORAD_CARDEX_KEY",
+                    "translationKey":"DASHBOARD_CARDEX_KEY",
                     "type": "cardex",
                     "displayOrder": 7
                 }
